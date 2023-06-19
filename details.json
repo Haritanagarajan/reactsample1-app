@@ -1,0 +1,44 @@
+[
+    {
+      "name": "HARITA",
+      "url": "https://www.melivecode.com/users/10.png",
+      "role": "Full stack Angular",
+      "experience": "3 years of experience."
+    },
+    {
+      "name": "RANITA",
+      "url": "https://www.melivecode.com/users/2.png",
+      "role": "Full stack React",
+      "experience": "3 years of experience."
+    },
+    {
+      "name": "SHARON",
+      "url": "https://www.melivecode.com/users/3.png",
+      "role": "Full stack React Native",
+      "experience":"3 years of experience."
+    },
+    {
+      "name": "YAMINI",
+      "url": "https://www.melivecode.com/users/4.png",
+      "role": "Full stack React Redux",
+      "experience": "3 years of experience."
+    },
+    {
+      "name": "HARISHMITHA",
+      "url": "https://www.melivecode.com/users/5.png",
+      "role": "Full stack React Redux",
+      "experience": "3 years of experience."
+    },
+    {
+      "name": "KARTHIKEYAN",
+      "url": "https://www.melivecode.com/users/6.png",
+      "role": "Full stack React Redux",
+      "experience": "3 years of experience."
+    },
+    {
+      "name": "DHARSHAN",
+      "url": "https://www.melivecode.com/users/7.png",
+      "role": "Full stack php",
+      "experience": "3 years of experience."
+    }
+  ]

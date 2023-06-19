@@ -14,11 +14,11 @@ import About from './components/About';
 function App() {
   return (
     <div>
-      {/* <Content/>
-      <Classstate/> */}
+     
       <Nav />
 
       <Routes>
+
         <Route exact path="Home" element={<Home />} />
         <Route exact path="News" element={<News />} />
 

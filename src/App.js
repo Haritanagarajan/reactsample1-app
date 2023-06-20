@@ -8,6 +8,9 @@ import Home from './components/Home';
 import News from './components/News';
 import Contact from './components/Contact';
 import About from './components/About';
+import RouterAdvance from './components/RouterAdvance';
+import RouterComponent from './components/RouterComponent';
+
 
 
 
@@ -25,6 +28,10 @@ function App() {
         <Route exact path="Contact" element={<Contact />} />
 
         <Route exact path="About" element={<About />} />
+        <Route exact path="RouterAdvance" element={<RouterAdvance />} />
+
+        <Route exact path="RouterComponent" element={<RouterComponent />} />
+
 
       </Routes>
     </div>

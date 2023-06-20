@@ -45,7 +45,7 @@ const About = () => {
                                 marginBottom: 30,
                             }}
                         >
-                            <div  style={{ border: 'none', marginTop: 10 }}>
+                            <div style={{ border: 'none', marginTop: 10 }}>
 
                                 <div className="card">
 
@@ -56,7 +56,7 @@ const About = () => {
                                             : 'MORE INFO'}
 
                                         {shownames && shownames.id === names.id && (
-                                            <div className='card' style={{border:'inset'}}>
+                                            <div className='card' style={{ border: 'inset' }}>
                                                 <p style={{ color: 'black', fontWeight: '500' }}>
                                                     {names.name}
                                                     <br />
@@ -70,7 +70,7 @@ const About = () => {
 
                                 </div>
 
-                                <img src={names.url} alt={names.name} height={100} width={100} style={{marginLeft:'10px'}}/>
+                                <img src={names.url} alt={names.name} height={100} width={100} style={{ marginLeft: '10px' }} />
 
                             </div>
                         </div>

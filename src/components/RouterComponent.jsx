@@ -21,7 +21,7 @@ const RouterComponent = () => {
                     <Route path="Products/" element={<Products />}></Route>
 
 
-                    <Route path="/ProductDetails/:details.id" element={<ProductDetails />} />
+                    <Route path="/ProductDetails" element={<ProductDetails />} />
 
 
                 </Routes>
@@ -36,16 +36,16 @@ const RouterComponent = () => {
 
 export const Products = () => {
     const [product, setproduct] = useState([]);
-    // const [shownames, setNames] = useState(null);
+    const [shownames, setNames] = useState(null);
 
 
-    // function toggle(details) {
-    //     if (shownames && shownames.id === details.id) {
-    //         setNames(null);
-    //     } else {
-    //         setNames(details);
-    //     }
-    // }
+    function toggle(details) {
+        if (shownames && shownames.id === details.id) {
+            setNames(null);
+        } else {
+            setNames(details);
+        }
+    }
 
     const fetchData = () => {
         fetch('http://localhost:4000/Products')
@@ -76,7 +76,7 @@ export const Products = () => {
 
 
 
-                            {/* <button onClick={() => toggle(details)} className="btn">
+                            <button onClick={() => toggle(details)} className="btn">
 
                                 {shownames && shownames.id === details.id
                                     ? 'LESS INFO'
@@ -92,7 +92,7 @@ export const Products = () => {
                                         </p>
                                     </div>
                                 )}
-                            </button> */}
+                            </button>
 
 
 
@@ -102,7 +102,7 @@ export const Products = () => {
 
                                 <Link to={`ProductDetails/${details.id}`} className="navlink1 ms-5 ps-3 mt-5">
 
-                                    View Order {details.pname}
+                                    View Order {details.id}
 
                                 </Link>
 
@@ -140,22 +140,41 @@ export const Products = () => {
 
 
 export const ProductDetails = () => {
-    const params = useParams();
+    const { id } = useParams();
     const navigate = useNavigate();
+    const [product, setproduct] = useState(null);
+
+    useEffect(() => {
+        fetch(`http://localhost:4000/Products/${id}`)
+            .then((response) => response.json())
+            .then((data) => setproduct(data));
+    }, [id]);
+
 
     const onBackClick = (e) => {
         e.preventDefault();
-        // navigate("/RouterComponent/Products");
+        navigate("/RouterComponent/Products");
     };
 
     return (
         <>
-            {/* <h2 style={{ color: 'black', fontSize: 21 }}>Details of order {params.details.id}</h2> */}
-            <button onClick={onBackClick} style={{ color: 'black', fontSize: 21 }}>
-                Back to Products
-            </button>
+
+            {product.map((id) => (
+                <div>
+
+                    <h2 style={{ color: 'black', fontSize: 21 }}>Details of order {id}</h2>
+                    <button onClick={onBackClick} style={{ color: 'black', fontSize: 21 }}>
+                        Back to Products
+                    </button>
+                </div>
+
+            ))}
+
         </>
+
+
     );
+
 };
 
 export default RouterComponent;

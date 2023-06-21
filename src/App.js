@@ -1,7 +1,5 @@
 import './App.css';
 import './index.css';
-// import Content from './components/Content';
-// import Classstate from './components/Classstate';
 import Nav from './components/Nav'
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
@@ -10,6 +8,7 @@ import Contact from './components/Contact';
 import About from './components/About';
 import RouterAdvance from './components/RouterAdvance';
 import RouterComponent from './components/RouterComponent';
+import ProductDetails from './components/ProductDetails';
 
 
 
@@ -17,7 +16,7 @@ import RouterComponent from './components/RouterComponent';
 function App() {
   return (
     <div>
-     
+
       <Nav />
 
       <Routes>
@@ -30,7 +29,10 @@ function App() {
         <Route exact path="About" element={<About />} />
         <Route exact path="RouterAdvance" element={<RouterAdvance />} />
 
-        <Route exact path="RouterComponent/*" element={<RouterComponent />} />
+        <Route exact path="RouterComponent" element={<RouterComponent />} />
+
+        <Route path="ProductDetails/:id" element={<ProductDetails />} />
+
 
 
       </Routes>

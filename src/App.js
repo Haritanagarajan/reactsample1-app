@@ -9,6 +9,7 @@ import About from './components/About';
 import RouterAdvance from './components/RouterAdvance';
 import RouterComponent from './components/RouterComponent';
 import ProductDetails from './components/ProductDetails';
+import Addcart from './components/Addcart';
 
 
 
@@ -32,6 +33,8 @@ function App() {
         <Route exact path="RouterComponent" element={<RouterComponent />} />
 
         <Route path="ProductDetails/:id" element={<ProductDetails />} />
+
+        <Route path="Addcart" element={<Addcart />} />
 
 
 

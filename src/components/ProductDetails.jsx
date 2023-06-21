@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import Swal from "sweetalert2";
+
 
 
 const ProductDetails = () => {
@@ -25,16 +27,38 @@ const ProductDetails = () => {
     return (
 
         <div style={{ paddingLeft: 300, paddingBottom: 60 }}>
-            <h2 style={{ color: 'black', fontWeight: '600', paddingLeft: 200, marginTop: 2 }}>Products</h2>
             <div style={{ marginTop: -90 }}>
                 <h2 style={{ color: 'black', paddingLeft: 10, fontWeight: '200' }}>Product Details</h2>
-                <img src={products.pimg} alt={products.pamnt} height={300} width={300} onClick={handleGoBack} />
-                <h5>{products.pname}</h5>
+                <img className="mt-5 pt-5" src={products.pimg} alt={products.pamnt} height={300} width={300} onClick={handleGoBack} />
                 <h5>Price: {products.pamnt}</h5>
-                <button type="button" class="btn btn-success" >BUY NOW</button>
+                <button type="button" class="btn btn-success" onClick={Buynow}>BUY NOW</button>
+                <button type="button" class="btn btn-success ms-5">ADD TO CART</button>
+
             </div>
         </div>
     );
 };
+
+
+
+
+const Buynow = () => {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You wanted to buy it!",
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                'order placed!',
+                'Your order will be deleivered.',
+                'success'
+            )
+        }
+    })
+}
 
 export default ProductDetails;

@@ -87,8 +87,3 @@ export default RouterAdvance;
 
 
 
-    // return (
-    //     <div className="text-center">
-    //         <h1>Product Details</h1>
-    //     </div>
-    // );

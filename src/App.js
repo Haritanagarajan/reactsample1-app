@@ -30,10 +30,11 @@ function App() {
         <Route exact path="About" element={<About />} />
         <Route exact path="RouterAdvance" element={<RouterAdvance />} />
 
-        <Route exact path="RouterComponent" element={<RouterComponent />} />
+        <Route exact path="RouterComponent/*" element={<RouterComponent />} />
 
 
       </Routes>
+
     </div>
 
 

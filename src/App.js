@@ -10,6 +10,7 @@ import RouterAdvance from './components/RouterAdvance';
 import RouterComponent from './components/RouterComponent';
 import ProductDetails from './components/ProductDetails';
 import Addcart from './components/Addcart';
+import Stylecomponent from './components/Stylecomponent';
 
 
 
@@ -36,6 +37,7 @@ function App() {
 
         <Route path="Addcart" element={<Addcart />} />
 
+        <Route path="Stylecomponent" element={<Stylecomponent />} />
 
 
       </Routes>

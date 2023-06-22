@@ -11,6 +11,7 @@ export default function Nav() {
       <Link to="About">About</Link>
       <Link to="Routeradvance">RouterAdvance</Link>
       <Link to="RouterComponent">RouterComponent</Link>
+      <Link to="Stylecomponent">Stylecomponent</Link>
 
 
     </div>
